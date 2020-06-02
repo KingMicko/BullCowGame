@@ -5,12 +5,24 @@ void UBullCowCartridge::BeginPlay() // When the game starts
 {
     Super::BeginPlay();
     PrintLine(TEXT("Hello. Welcome to the Bulls and Cows Game!"));
+    PrintLine(TEXT("Guess the four letter word\n"));    // Remove magic number.
     PrintLine(TEXT("Press enter to continue....\n"));
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
     ClearScreen();
-    FString HiddenWord = TEXT("round"); // Use unreal TEXT macro.
+    FString HiddenWord = TEXT("cake"); // Move outside function.
     PrintLine(Input);
+
+    if (Input == HiddenWord)
+    {
+        //GameWon();
+        PrintLine(TEXT("Well done, you won!"));
+    }
+    else
+    {
+        PrintLine(TEXT("Hard luck, you lost!"));
+        //GameLost();
+    }
 }
