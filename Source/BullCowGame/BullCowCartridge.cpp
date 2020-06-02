@@ -23,6 +23,5 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
     else
     {
         PrintLine(TEXT("Hard luck, you lost!"));
-        //GameLost();
     }
 }
