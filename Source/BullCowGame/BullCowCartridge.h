@@ -17,5 +17,15 @@ public:
 
 	// Your declarations go below!
 private:
+	bool bGameOver;
 	FString HiddenWord;	// Word to guess.
+	int32 NumLives;
+	int32 WordLength;
+	int32 GuessLength;
+
+	// Functions.
+	void InitializeGame();
+	void DisplayWelcomeMessage();
+	void GetPlayerGuess();
+	void EndGame();
 };

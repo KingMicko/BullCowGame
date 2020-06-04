@@ -9,7 +9,7 @@ void UCartridge::BeginPlay()
 {
 	Super::BeginPlay();
 	Terminal = GetOwner()->FindComponentByClass<UTerminal>();
-	checkf(Terminal, TEXT("[%s]: No Terminal found"), *GetName())
+	checkf(Terminal, TEXT("[%s]: No Terminal found"), *GetName());
 }
 
 void UCartridge::PrintLine(const FString& Line) const
